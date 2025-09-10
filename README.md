@@ -1,12 +1,123 @@
-# React + Vite
+Cadastro de Usuários
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação React + Vite (frontend) com Node.js/Express (backend) para cadastrar usuários (nome, idade e e-mail) e exibir a lista com ícones e dados.
 
-Currently, two official plugins are available:
+✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Formulário de cadastro (nome, idade, e-mail).
 
-## Expanding the ESLint configuration
+Lista de usuários cadastrados com ícones.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Navegação com React Router.
+
+Comunicação Axios com a API Node/Express.
+
+🛠️ Stack
+
+Frontend
+
+React (Vite)
+
+React Router
+
+Axios
+
+Styled-Components
+
+Backend
+
+Node.js + Express
+
+📁 Estrutura (sugerida)
+/
+├── frontend/                 # React + Vite
+│   ├── src/
+│   └── .env                  # VITE_API_URL=http://localhost:3000
+└── backend/                  # Node/Express
+    ├── server.js
+    └── .env                  # PORT=3000
+
+🔑 Variáveis de ambiente
+Frontend (frontend/.env)
+VITE_API_URL=http://localhost:3333
+
+Backend (backend/.env)
+PORT=3333
+# Outras chaves se necessário (ex.: DB_URL etc.)
+
+▶️ Como rodar localmente
+1) Backend
+cd backend
+npm install
+npm run dev   # ou npm start (conforme seu package.json)
+
+2) Frontend
+cd frontend
+npm install
+npm run dev
+
+
+Frontend: http://localhost:5173 (porta padrão do Vite)
+
+Backend: http://localhost:3333 (ou a porta definida no .env)
+
+🔗 Endpoints da API
+POST /usuarios
+
+Cadastra um novo usuário.
+
+Body (JSON)
+
+{
+  "name": "Miguel",
+  "age": 19,
+  "email": "miguel@email.com"
+}
+
+GET /usuarios
+
+Lista todos os usuários.
+
+GET /buscar/usuario/:id
+
+Retorna um usuário pelo id.
+
+🧩 Scripts úteis
+Frontend (frontend/package.json)
+
+dev – roda o Vite em desenvolvimento
+
+build – build de produção
+
+preview – preview do build
+
+Backend (backend/package.json)
+
+dev – inicia o servidor em dev (ex.: com nodemon)
+
+start – inicia o servidor em produção
+
+Exemplo:
+
+{
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  }
+}
+
+🧭 Rotas do frontend (React Router)
+
+/ – página de cadastro
+
+/usuarios – lista de usuários
+
+🎨 Estilo
+
+Styled-Components para estilização.
+
+Ícones: use a lib que preferir (ex.: react-icons).
+
+👤 Autor
+
+Miguel Vitor Ferraz Braz
