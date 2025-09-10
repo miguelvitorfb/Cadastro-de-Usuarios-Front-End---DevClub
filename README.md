@@ -24,7 +24,7 @@ Axios
 
 Styled-Components
 
-Backend
+Backend(OBS: O backend está em outro repositório de pasta parecida)
 
 Node.js + Express
 
@@ -39,10 +39,10 @@ Node.js + Express
 
 🔑 Variáveis de ambiente
 Frontend (frontend/.env)
-VITE_API_URL=http://localhost:3333
+VITE_API_URL=http://localhost:3000
 
 Backend (backend/.env)
-PORT=3333
+PORT=3000
 # Outras chaves se necessário (ex.: DB_URL etc.)
 
 ▶️ Como rodar localmente
